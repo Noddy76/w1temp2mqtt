@@ -1,6 +1,7 @@
 # w1temp2mqtt
 
 ![GitHub license](https://img.shields.io/github/license/Noddy76/w1temp2mqtt.svg)
+![Go](https://github.com/Noddy76/w1temp2mqtt/workflows/Go/badge.svg)
 
 A simple daemon to report a 1wire DS18B20 temperature probe to MQTT.
 
