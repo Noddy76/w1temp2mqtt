@@ -18,3 +18,18 @@ A simple daemon to report a 1wire DS18B20 temperature probe to MQTT.
 | broker   | tcp://localhost:1883 | MQTT Broker connext string     |
 | clientid | w1temp2mqtt          | MQTT client ID                 |
 | topic    | w1temp2mqtt          | MQTT topic to publish lines on |
+
+## Example SystemD service file
+
+```
+[Unit]
+Description=Report Outside Temperature to MQTT
+
+[Service]
+User=pi
+ExecStart=/usr/local/bin/w1temp2mqtt -broker tcp://localhost:1883 -topic sensor/outside-temperature -device 28-000000000000
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
